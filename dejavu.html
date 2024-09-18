@@ -12,83 +12,240 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #030712;
-            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #000000, #1a1a3f);
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        .navbar {
+        .header {
             background-color: #1f2937;
-            padding: 0.5rem 1rem; /* Adjusted padding for a smaller navbar */
+            padding: 15px 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            height: auto; /* Adjust height based on content */
-            min-height: 60px; /* Set a smaller minimum height */
         }
 
         .logo-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             text-align: center;
         }
 
         .logo {
-            max-width: 150px; /* Maximum width to fit within the navbar */
-            max-height: 60px; /* Ensure the height fits well within the navbar */
-            height: auto; /* Maintain aspect ratio */
+            max-width: 200px;
+            margin-bottom: 10px;
         }
 
         .logo-text {
             color: white;
-            margin-top: 0.5rem; /* Space between logo and text */
-            font-size: 1rem; /* Adjust font size */
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
-        /* Media query for tablets */
-        @media screen and (min-width: 768px) {
-            .navbar {
-                padding: 0.5rem 1.5rem; /* Adjusted padding */
-                min-height: 80px; /* Adjusted minimum height */
+        .main-content {
+            text-align: center;
+            padding: 20px 20px;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to right, red, white);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #a1a9f8;
+            margin-bottom: 15px;
+        }
+
+        .Text1{
+            
+            font-weight: 300;
+            margin-top: 1.25rem;
+            color: #ffff;
+        }
+        .text2{
+                color: #8138F8;
+            }
+        .icons {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .icons a {
+            transition: transform 0.3s ease;
+        }
+
+        .icons img {
+            width: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .icons a:hover img {
+            transform: scale(1.1);
+        }
+
+        .support-section {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .support-section a {
+            transition: transform 0.3s ease;
+        }
+
+        .support-section img {
+            max-width: 140px;
+            transition: transform 0.3s ease;
+        }
+
+        .support-section a:hover img {
+            transform: scale(1.1);
+        }
+
+        .support-or {
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 0 10px;
+        }
+
+        .description {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+        .description2 {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+        .description3{
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+
+        .note {
+            font-style: italic;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-top: 1rem;
+            line-height: .002rem;;
+        }
+        
+        .note1 {
+            text-align: 30px;
+            font-size: 1rem;
+            color: #fff;
+            margin-top: 2.5rem;
+            margin: 40px;
+        }
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
             }
 
-            .logo {
-                max-width: 180px; /* Adjusted for tablets */
-                max-height: 70px; /* Adjusted for tablets */
+            .subtitle {
+                font-size: 1.2rem;
             }
 
-            .logo-text {
-                font-size: 1.1rem; /* Adjusted font size */
+            .icons img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .support-section img {
+                max-width: 120px;
             }
         }
 
-        /* Media query for desktops */
-        @media screen and (min-width: 1024px) {
-            .navbar {
-                padding: 0.5rem 2rem; /* Adjusted padding */
-                min-height: 100px; /* Adjusted minimum height */
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2rem;
             }
 
-            .logo {
-                max-width: 500px; /* Adjusted for desktops */
-                max-height: 200px; /* Adjusted for desktops */
+            .subtitle {
+                font-size: 1rem;
+            }
+             
+            .icons img {
+                width: 35px;
+                height: 35px;
             }
 
-            .logo-text {
-                font-size: 1.2rem; /* Adjusted font size */
+            .support-section img {
+                max-width: 100px;
+            }
+
+            .support-or img {
+                max-width: 50px;
             }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
+    <header class="header">
         <div class="logo-container">
-            <img src="images/ooye.labs-logo.svg" alt="AdSkipper Logo" class="logo">
+            <img src="https://www.adskipper.me/incogni.svg" alt="AdSkipper Logo" class="logo">
             <p class="logo-text">I love ooyelabs</p>
         </div>
-    </nav>
+    </header>
+    <div class="main-content">
+        <div>
+           <p class="AdSkipper1">AdSkipper</p>
+        </div>
+            <h1 class="Text1">
+                Browser extension that 
+                <br>
+                <span class="text2">automatically skips ads</span>
+            </h1>
+        <div class="icons">
+            <a href="#"><img src="https://www.adskipper.me/browsers/firefox.png" alt="Icon 1"></a>
+            <a href="#"><img src="https://www.adskipper.me/browsers/chrome.png" alt="Icon 2"></a>
+            <a href="#"><img src="https://www.adskipper.me/browsers/chromium.png" alt="Icon 3"></a>
+            <a href="#"><img src="https://www.adskipper.me/browsers/brave.png" alt="Icon 4"></a>
+            <a href="#"><img src="https://www.adskipper.me/browsers/vivaldi.png" alt="Icon 5"></a>
+            <a href="#"><img src="https://www.adskipper.me/browsers/arc.png" alt="Icon 6"></a>
+            <a href="#"><img src="https://www.adskipper.me/browsers/edge.png" alt="Icon 7"></a>
+            <a href="#"><img src="https://www.adskipper.me/browsers/opera.png" alt="Icon 8"></a>
+            <a href="#"><img src="https://www.adskipper.me/browsers/safari.png" alt="Icon 9"></a>
+        </div>
+        <p class="note">*click on Chromium if your browser is Chromium-based but not on the list above</p>
+        <P class="note1">Support the project on</P>
+        <div class="support-section">
+            <a href="#"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee"></a>
+            <span class="support-or">OR</span>
+            <a class="Patreon1" href="#"><img src="https://www.adskipper.me/patreon-logo.png" alt="Patreon"></a>
+        </div>
+        <p class="description">
+            AdSkipper is a browser extension that automatically skips video ads on websites. It works silently in the background without disturbing your flow. No need to wait those 5 seconds for the skip button to show up. Just install it and forget about it.
+        </p>
+        <p class="description2">AdSkipper doesn't block ads, but rather skips them, so websites cannot detect it that easy, as if it were just a regular ad blocker.
+        </p>
+        <p class="description3">I wouldn't recommend using adblocker of any type on YouTube because they might flag you, and then you will need to change browser. Disable ad blocker on YouTube, and let my extension do the rest.</p>
+    </div>
 </body>
 </html>
